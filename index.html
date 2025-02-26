@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب منتجات عصير الحياة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>طلب منتجات عصير الحياة</h2>
+        <form id="orderForm">
+            <label>المحافظة:</label>
+            <select id="governorate" required>
+                <option value="">اختر المحافظة</option>
+                <option>بغداد</option>
+                <option>البصرة</option>
+                <option>نينوى</option>
+                <option>أربيل</option>
+                <option>كركوك</option>
+                <option>النجف</option>
+                <option>كربلاء</option>
+                <option>ديالى</option>
+                <option>الموصل</option>
+                <option>ذي قار</option>
+                <option>الأنبار</option>
+                <option>السليمانية</option>
+                <option>واسط</option>
+                <option>ميسان</option>
+                <option>صلاح الدين</option>
+                <option>المثنى</option>
+                <option>بابل</option>
+                <option>دهوك</option>
+                <option>القادسية</option>
+                <option>حلبجة</option>
+            </select>
+
+            <label>اسم الحي أو المنطقة:</label>
+            <input type="text" id="district" required placeholder="مثال: حي الجامعة">
+
+            <label>عدد القطع:</label>
+            <select id="quantity" required onchange="updatePrice()">
+                <option value="1">قطعة واحدة - 35,000 دينار</option>
+                <option value="2">قطعتان - 50,000 دينار</option>
+                <option value="3">ثلاث قطع - 60,000 دينار</option>
+            </select>
+
+            <label>السعر الكلي:</label>
+            <input type="text" id="totalPrice" readonly value="35,000 دينار">
+
+            <label>رقم الهاتف:</label>
+            <input type="tel" id="phone" required pattern="[0-9]{11}" placeholder="07701234567">
+
+            <button type="submit">إرسال الطلب</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
